@@ -15,6 +15,7 @@ const { startStandaloneServer } = require ('@apollo/server/standalone');
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware,
 });
 
 const startServer = async () => {   
