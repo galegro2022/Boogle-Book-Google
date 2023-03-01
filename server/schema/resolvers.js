@@ -21,14 +21,14 @@ const resolvers = {
         }
     },
     Mutation: {
-        createbook: async (parent, { bookData }) => {
+        createBook: async (parent, { bookData }) => {
             const book = await Book.create(bookData);
             return book;
         },
-        updatebook: async (parent, { bookId, bookData }) => {
+        updateBook: async (parent, { bookId, bookData }) => {
             const book = await Book.update(bookId, bookData);
         },
-        deletebook: async (parent, { bookID }) => {
+        deleteBook: async (parent, { bookID }) => {
             const book = await Book.deleteOne(bookID);
         },
         createUser: async (parent, { username, email, password }) => {

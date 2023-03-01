@@ -46,7 +46,7 @@ type Author {
     deleteBook(bookId: ID!): Boolean!
     createUser(username: String!, email: String!, password: String!): User!
     deleteUser(username: String!): Boolean!
-    login(email: String!, password: String!): Auth
+    login(email: String!, password: String!): Author!
     logout: Boolean!
   }`
 
